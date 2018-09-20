@@ -1,0 +1,84 @@
+
+@import 'palette.less';
+
+body {
+    background-color: @color2;
+}
+
+section#projects {
+    display: block;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 1.2em;
+}
+
+div.left {
+    margin-bottom: 1em;
+    a {
+        font-size: 1.2em;
+        font-weight: bold;
+        display: block;
+        text-align: left;
+        padding-left: 2em;
+        padding-top: 1em;
+    }
+    p {
+        padding: 1em;
+    }
+    label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        padding-left: 3em;
+    }
+    ul {
+        text-align: left;
+        padding-left: 4em;
+        padding-bottom: 1em;
+    }
+}
+
+div.right {
+    img {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 481px) {
+    
+    div.left {
+        p {
+            padding-left: 3em;
+            padding-right: 3em;
+        }
+        label {
+            padding-left: 7em;
+        }
+        ul {
+            padding-left: 9em;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    h1 {
+        margin-top: 1.5em;
+    }
+    
+    div.left {
+        position: fixed;
+    }
+    div.right {
+        img {
+            min-height: 110vh;
+            object-fit: cover;
+        }
+    }
+
+}

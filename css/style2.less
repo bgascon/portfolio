@@ -1,0 +1,443 @@
+/*
+File Name: style.less
+Date: 08/2018
+Programmer: Betsy Gascon
+*/
+
+/*pallete colors*/
+@color1: gainsboro;
+@color2: maroon;
+@color3: whitesmoke;
+
+@font-face {
+  font-family: 'helena';
+  src: url('css/Helena.ttf') format('truetype'), url('Helena.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/* MOBILE STYLESHEET */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: @color1;
+    color: black;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+}
+a:link {
+    color: @color2;
+    font-weight: bold;
+
+}
+a:visited {
+    color: @color2;
+}
+a:hover {
+    
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    text-transform: lowercase;
+    color: @color2;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    line-height: 1.3em;
+    color: black;
+    text-transform: uppercase;
+    font-size: .8em;
+}
+div.line-break {
+    border-bottom: 2px solid black;
+    width: 10vw;
+    margin: 0 auto;
+}
+
+nav {
+    z-index: 100;
+    width: 100vw;
+    height: 55px;
+    top: 0;
+    position: fixed;
+    background: @color3;
+    a#logo {
+        padding: 20px 20px;
+        float: left;
+        font-family: 'Poppins';
+        font-size: 1.3em;
+        font-weight: 700;
+        color: @color2;
+    }
+    ul.desktop-nav {
+        display: none;
+    }
+    button {
+        z-index: 50;
+        float: right;
+    }
+    ul.mobile-nav {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: @color3;
+        margin-top: 55px;
+        li {
+            font-size: 1.5em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            letter-spacing: 3px;
+            display: block;
+            padding-top: 2em;
+            height: 15%;
+            height: calc(100% / 5);
+        }
+        
+    }
+    .mobile-nav.active {
+        display: block;
+        text-align: center; 
+    }
+}
+
+header {
+    text-align: center;
+    padding: 1.5em;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    padding-top: 3.5em;
+    span#name {
+        color: black;
+    }
+    #hello {
+        font-family: 'helena';
+        float: left;
+        font-size: 3.5em;
+        color: @color3;
+        padding-left: .3em;
+    }
+    h1 {
+        padding-top: 2.2em;
+    }
+    h3 {
+        margin-top: 3em;
+        margin-bottom: 4em;
+    }
+    i {
+        transform: rotate(-45deg);
+    }
+    a {
+        float: left;
+    }
+}
+
+main {
+    //padding: 1.5em;
+    section#about {
+        //padding-top: 2em;
+        margin-top: 55px;
+        padding-left: 1em;
+        padding-right: 1em;
+        h2, p {
+            padding: 1em 1em 1.5em 1em;
+        }
+        p {
+            line-height: 1.4em;
+            padding-bottom: .6em;
+        }
+        ul {
+            li {
+                font-weight: 600;
+                letter-spacing: 2.5px;
+                display: inline-flex;
+                padding-bottom: .1em;
+                padding-right: .3em;
+                font-size: .8em;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+    section#projects {
+        margin-top: 55px;
+        padding-top: 3em;
+        padding: 1em;
+        h2, p {
+            padding: 1em 1em 1.5em 1em;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            flex: 100%;
+            max-width: 100%;
+        }
+
+        .column img {
+            vertical-align: middle;
+        }
+        
+        .container {
+              position: relative;
+              width: 100%;
+            }
+
+        .image {
+              display: block;
+              width: 100%;
+              height: auto;
+        }
+
+        .overlay {
+              position: absolute;
+              top: 35%;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              height: 25%;
+              width: 100%;
+              opacity: .5;
+              transition: .5s ease;
+              background-color: black;
+            }
+
+        /*.container:hover .overlay {
+              opacity: .5;
+            }*/
+
+        .text {
+              color: white;
+              font-size: 20px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+              text-align: center;
+                }
+    }
+    
+    section#contact {
+        margin-top: 55px;
+        padding-top: 3em;
+        padding: 1em;
+        h2 {
+            padding: 1em 1em 1.5em 1em;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: @color3;
+    font-family: 'Poppins', sans-serif;
+    font-size: .7em;
+    text-transform: lowercase;
+    padding: 2em;
+    padding-top: 7em;
+    p {
+        padding-top: 3em;
+        
+    }
+    ul#social {
+        display: inline-flex;
+        li a {
+            text-align: center;
+            padding: .9em;
+            color: black;
+            font-size: 2.5em;
+            font-weight: 200;
+        }   
+    }
+}
+
+.bold {
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding-bottom: 1em;
+}
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+    h1 {
+        font-size: 3.2em;
+    }
+    
+    header {
+        #hello {
+            font-size: 4.5em;
+            padding-left: 1em;
+        }
+        h1 {
+            padding: 2em 1em 1em 1em;
+        }
+        h3 {
+            margin-top: 1em;    
+        }
+        a {
+            margin-top: 3em;
+            margin-left: 5em;
+            margin-bottom: 5em;
+            font-size: 1em;
+        }
+    }
+    main {
+        section#about {
+            margin-bottom: 5em;
+        }
+        section#projects {
+            margin-bottom: 5em;
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+            .overlay {
+                opacity: 0;
+                top: 0;
+                height: 100%;
+            }
+            .container:hover .overlay {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+/*
+
+DESKTOP STYLESHEET
+
+The following CSS affects all screen sizes larger than 1025 pixels wide.
+
+*/
+
+@media only screen and (min-width: 1025px) {
+    h1 {
+        font-size: 2.8em;
+    }
+    nav {
+        button.hamburger {
+            display: none;
+        }
+        ul.mobile-nav {
+            display: none;
+        }
+        ul.desktop-nav {
+            display: flex;
+            float: right;
+            margin-top: 20px;
+            li {
+                padding-right: 3em;
+            }
+        }
+    }
+    header {
+        min-height: 90vh;
+        
+        #hello {
+            font-size: 8em;
+            margin-top: .3em;
+        }
+        h1 {
+            padding: 1em;
+            margin: 3em 6.5em 0 6.5em;
+        }
+        a {
+            margin-left: 250px;
+        }
+    }
+    main {
+        div.left {
+            width: 20%;
+            float: left;
+            text-align: left;
+            h2 {
+                margin-top: 3em;
+            }
+        }
+        div.right {
+            width: 78%;
+            float: right;
+            text-align: left;
+            h1 {
+                margin-top: 1em;
+            }
+        }
+        div#project-container {
+                width: 80%;
+                margin: 0 auto;
+            }
+        section#about {
+            min-height: 60vh;
+            p, h2 {
+                padding: 0;
+            }
+            p {
+                padding-top: 1.5em;
+            }
+            h2 {
+                padding-left: 7em;
+            }
+        }
+        section#projects {
+            h2 {
+                padding-left: 7em;
+                padding-bottom: 4em;
+            }
+            .column {
+                flex: 33.33%;
+                max-width: 33.33%;
+            }
+        }
+        section#contact {
+            padding: 0;
+            min-height: 40vh;
+            h2 {
+                padding-left: 7em;
+            p {
+                margin-top: 5em;
+            }
+        }
+        }
+    }
+    
+}
